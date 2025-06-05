@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:maruti_construction/view/loginScreen.dart';
+import 'package:maruti_construction/view/projectDetailScreen.dart';
+import 'package:maruti_construction/view/siteProgress.dart';
 import 'package:maruti_construction/widgets/spalshScreen.dart';
 import 'package:sizer/sizer.dart';
 import 'package:get/get.dart';
@@ -22,7 +25,13 @@ class _MyAppState extends State<MyApp> {
       builder: (context, orientation, deviceType) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          home: SplashScreen(),
+          initialRoute: '/',
+          getPages: [
+            GetPage(name: '/', page: () => SplashScreen()),
+            GetPage(name: '/LoginScreen', page: () => LoginScreen()),
+            GetPage(name: '/SiteProgressScreen', page: () => SiteProgress()),
+            GetPage(name: '/ProjectDetailScreen', page: () => ProjectDetailScreen()),
+          ],
         );
       },
     );

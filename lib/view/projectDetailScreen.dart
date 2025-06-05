@@ -7,14 +7,14 @@ import 'package:sizer/sizer.dart';
 
 import '../widgets/customAppBar.dart';
 
-class projectDetailScreen extends StatefulWidget {
-  const projectDetailScreen({super.key});
+class ProjectDetailScreen extends StatefulWidget {
+  const ProjectDetailScreen({super.key});
 
   @override
-  State<projectDetailScreen> createState() => _projectDetailScreenState();
+  State<ProjectDetailScreen> createState() => _ProjectDetailScreenState();
 }
 
-class _projectDetailScreenState extends State<projectDetailScreen> {
+class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

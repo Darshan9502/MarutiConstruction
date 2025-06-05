@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:maruti_construction/view/siteProgress.dart';
 import 'package:sizer/sizer.dart';
 
@@ -32,8 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 4.50.h,
-                  margin: EdgeInsets.only(top: 5.56.h),
+                  margin: EdgeInsets.only(top: 9.34.h),
                   child: Text(
                     'Login',
                     style: TextStyle(
@@ -108,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 // SizedBox(height: 5),
                 GestureDetector(
                   onTap: () {
-                    Get.to(() => const SiteProgress());
+                    Get.toNamed('SiteProgressScreen');
                   },
                   child: Container(
                     height: 5.58.h,

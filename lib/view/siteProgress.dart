@@ -20,17 +20,16 @@ class _SiteProgressState extends State<SiteProgress> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 19.66.h),
+        preferredSize: Size(100.w, 20.21.h),
         child: Container(
-          height: 28.46.h,
           decoration: const BoxDecoration(
             color: Color.fromRGBO(239, 241, 239, 1),
           ),
           child: Column(
             children: [
               Container(
-                height: 17.12.h, // Remaining height (217 - 100)
-                width: double.infinity,
+                height: 17.12.h,
+                width: 100.w,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/appbar_background.png'),
@@ -42,10 +41,7 @@ class _SiteProgressState extends State<SiteProgress> {
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.only(
-                    left: 6.81.w,
-                    right: 3.40.w,
-                  ),
+                  padding: EdgeInsets.only(left: 6.81.w, right: 3.40.w),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
