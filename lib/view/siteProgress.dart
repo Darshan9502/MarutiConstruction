@@ -60,6 +60,7 @@ class _SiteProgressState extends State<SiteProgress> {
                                 icon: SvgPicture.asset(
                                   'assets/svgs/notification_icon.svg',
                                   height: 4.10.h,
+                                  width: 8.88.w
                                 ),
                                 onPressed: () {
                                   // Handle notification action
@@ -69,6 +70,7 @@ class _SiteProgressState extends State<SiteProgress> {
                                 icon: SvgPicture.asset(
                                   'assets/svgs/person_icon.svg',
                                   height: 4.10.h,
+                                  width: 8.88.w
                                 ),
                                 onPressed: () {
                                   // Handle notification action
@@ -108,16 +110,15 @@ class _SiteProgressState extends State<SiteProgress> {
         child: Padding(
           padding: EdgeInsets.only(left: 6.81.w, right: 6.81.w),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Center(
-                child: Text(
-                  'Current Projects',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w900,
-                    fontSize: 20.0,
-                  ),
+              Text(
+                'Current Projects',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 20.0,
                 ),
               ),
               SizedBox(height: 2.42.h),
