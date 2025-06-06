@@ -59,6 +59,7 @@ class _SiteProgressState extends State<SiteProgress> {
                               IconButton(
                                 icon: SvgPicture.asset(
                                   'assets/svgs/notification_icon.svg',
+                                  height: 4.10.h,
                                 ),
                                 onPressed: () {
                                   // Handle notification action
@@ -67,6 +68,7 @@ class _SiteProgressState extends State<SiteProgress> {
                               IconButton(
                                 icon: SvgPicture.asset(
                                   'assets/svgs/person_icon.svg',
+                                  height: 4.10.h,
                                 ),
                                 onPressed: () {
                                   // Handle notification action
@@ -98,7 +100,7 @@ class _SiteProgressState extends State<SiteProgress> {
         ),
       ),
       body: Container(
-        height: 74.78.h,
+        height: 100.h,
         width: 100.w,
         decoration: const BoxDecoration(
           color: Color.fromRGBO(239, 241, 239, 1),
@@ -108,16 +110,13 @@ class _SiteProgressState extends State<SiteProgress> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 2.52.h,
-                child: Center(
-                  child: Text(
-                    'Current Projects',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 20.0,
-                    ),
+              Center(
+                child: Text(
+                  'Current Projects',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w900,
+                    fontSize: 20.0,
                   ),
                 ),
               ),

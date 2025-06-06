@@ -6,6 +6,7 @@ import 'package:maruti_construction/widgets/projectCard.dart';
 import 'package:sizer/sizer.dart';
 
 import '../widgets/customAppBar.dart';
+import '../widgets/wingBox.dart';
 
 class ProjectDetailScreen extends StatefulWidget {
   const ProjectDetailScreen({super.key});
@@ -15,22 +16,23 @@ class ProjectDetailScreen extends StatefulWidget {
 }
 
 class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
+  int? _selectedWing;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 19.66.h),
+        preferredSize: Size(100.w, 31.40.h),
         child: Container(
-          height: 28.46.h,
           decoration: const BoxDecoration(
             color: Color.fromRGBO(239, 241, 239, 1),
           ),
           child: Column(
             children: [
               Container(
-                height: 17.12.h, // Remaining height (217 - 100)
-                width: double.infinity,
+                height: 17.12.h,
+                width: 100.w,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/appbar_background.png'),
@@ -42,10 +44,7 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.only(
-                    left: 6.81.w,
-                    right: 3.40.w,
-                  ),
+                  padding: EdgeInsets.only(left: 6.81.w, right: 3.40.w),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -63,6 +62,7 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
                               IconButton(
                                 icon: SvgPicture.asset(
                                   'assets/svgs/notification_icon.svg',
+                                  height: 4.10.h,
                                 ),
                                 onPressed: () {
                                   // Handle notification action
@@ -71,6 +71,7 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
                               IconButton(
                                 icon: SvgPicture.asset(
                                   'assets/svgs/person_icon.svg',
+                                  height: 4.10.h,
                                 ),
                                 onPressed: () {
                                   // Handle notification action
@@ -86,14 +87,39 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
                 ),
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(right: 6.81.w),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: SvgPicture.asset('assets/svgs/search_icon.svg'),
-                    ),
+                  WingBox(
+                    letter: 'A',
+                    index: 0,
+                    isSelected: _selectedWing == 0,
+                    onTap: () {
+                      setState(() {
+                        _selectedWing = 0;
+                      });
+                    },
+                  ),
+                  SizedBox(width: 20),
+                  WingBox(
+                    letter: 'B',
+                    index: 1,
+                    isSelected: _selectedWing == 1,
+                    onTap: () {
+                      setState(() {
+                        _selectedWing = 1;
+                      });
+                    },
+                  ),
+                  SizedBox(width: 20),
+                  WingBox(
+                    letter: 'C',
+                    index: 2,
+                    isSelected: _selectedWing == 2,
+                    onTap: () {
+                      setState(() {
+                        _selectedWing = 2;
+                      });
+                    },
                   ),
                 ],
               ),
@@ -102,43 +128,8 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
         ),
       ),
       body: Container(
-        height: 74.78.h,
-        width: 100.w,
         decoration: const BoxDecoration(
           color: Color.fromRGBO(239, 241, 239, 1),
-        ),
-        child: Padding(
-          padding: EdgeInsets.only(left: 6.81.w, right: 6.81.w),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 2.52.h,
-                child: Center(
-                  child: Text(
-                    'Current Projects',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 20.0,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 2.42.h),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: 5,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      margin: EdgeInsets.only(bottom: 2.2.h),
-                      child: Projectcard(),
-                    );
-                  },
-                ),
-              ),
-            ],
-          ),
         ),
       ),
     );

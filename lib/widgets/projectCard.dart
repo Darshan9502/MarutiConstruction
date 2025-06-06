@@ -59,8 +59,6 @@ Widget Card() {
               child: Transform.rotate(
                 angle: math.pi / 2, // Rotate 180 degrees to flip the starting point
                 child: SizedBox(
-                  width: 12.27.w,
-                  height: 5.67.h,
                   child: CircularProgressIndicator(
                     value: 1 - 0.25, // Reverse the progress to fill counterclockwise
                     strokeWidth: 5,
@@ -148,7 +146,12 @@ Widget Card() {
 class _ProjectcardState extends State<Projectcard> {
   @override
   Widget build(BuildContext context) {
-    return Card();
+    return GestureDetector(
+      onTap: () {
+        Get.toNamed('/ProjectDetailScreen');
+      },
+      child: Card()
+    );
     // return GestureDetector(
     //   onTap: () {
     //     // Navigate to project detail screen
