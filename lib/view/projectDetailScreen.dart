@@ -26,8 +26,6 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen>
   int? _selectedWing;
   final List<Map<String, dynamic>> wings = [
     {'name': 'A', 'progress': 0.0},
-    {'name': 'A', 'progress': 0.25},
-    {'name': 'A', 'progress': 0.50},
     {'name': 'B', 'progress': 0.75},
     {'name': 'C', 'progress': 1.0},
   ];
